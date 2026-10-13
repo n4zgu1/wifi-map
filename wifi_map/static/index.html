@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="de">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>wifi-map</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body>
+<header><h1>wifi-map <span>Passive WLAN-Funkkarte</span></h1><p>Empfangsorte, keine Routerstandorte. Keine SSIDs, Client-Daten oder Paketmitschnitte.</p></header>
+<nav>
+<label>Messlauf <select id="session"></select></label>
+<label>Zugangspunkt <select id="ap"><option value="">Alle</option></select></label>
+<button id="refresh">Aktualisieren</button><button id="fit">Einpassen</button>
+<button id="export">GeoJSON (100-m-Raster)</button>
+<label><input type="checkbox" id="tiles"> Online-Karte laden</label>
+</nav>
+<p id="status" role="status">Laden …</p>
+<div id="map"><canvas id="canvas" aria-label="WLAN-Messpunkte: Ziehen zum Verschieben, Mausrad zum Zoomen"></canvas><div id="attribution" hidden>© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap</a> contributors</div></div>
+<footer><span class="dot strong"></span> stark (−40 dBm) <span class="dot weak"></span> schwach (−90 dBm) · Ziehen zum Verschieben · Mausrad zum Zoomen<br>Offline-Hintergrund ist ein Koordinatenraster. Online-Kacheln übertragen IP-Adresse und Kartenausschnitt an OpenStreetMap. Exporte können trotz Vergröberung Rückschlüsse auf die Laufstrecke erlauben.</footer>
+</body></html>
